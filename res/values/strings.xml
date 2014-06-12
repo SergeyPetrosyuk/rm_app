@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RobotaMolodi</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="loading_of_resumes">Завантаження \n резюме</string>
+    <string name="search_hint">шукати</string>
+    <string name="in_city">в місті</string>
+    <string name="make_choice">обрати</string>
+    <string name="in_field">в галузі</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="site">Сайт:</string>
+    <string name="link">Джерело:</string>
+    <string name="publish_date">Опубліковано:</string>
+    <string name="check_connection">Перевірте підключення до Internet</string>
+    <string name="detail_search_arrow">детальний пошук</string>
+    
+    <string-array name="vacancy_or_resume">
+        <item>резюме</item>
+        <item>вакансії</item>
+    </string-array>
+
+</resources>

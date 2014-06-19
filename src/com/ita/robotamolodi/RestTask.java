@@ -84,7 +84,8 @@ public class RestTask extends AsyncTask<String, Void, String> {
 		/* JSON decoding */
 		JSONParser parser = new JSONParser();
 		try {
-			JSONArray array = (JSONArray) parser.parse(jsonData);
+			JSONObject mainObject = (JSONObject)parser.parse(jsonData);
+			JSONArray array = (JSONArray) mainObject.get("data");
 			Iterator<List> iterator = array.iterator();
 			
 			while (iterator.hasNext()) {

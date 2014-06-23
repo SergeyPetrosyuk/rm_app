@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">RobotaMolodi</string>
+    <string name="app_name">Робота молоді</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="loading_of_resumes">Завантаження \n резюме</string>
@@ -14,11 +14,14 @@
     <string name="link">Джерело:</string>
     <string name="publish_date">Опубліковано:</string>
     <string name="check_connection">Перевірте підключення до Internet</string>
-    <string name="detail_search_arrow">детальний пошук</string>
-    
+    <string name="detail_search_arrow">пошук</string>
+    <string name="done">Готово</string>
+
     <string-array name="vacancy_or_resume">
         <item>резюме</item>
         <item>вакансії</item>
     </string-array>
+
+    <string name="title_activity_select_city_or_field">SelectCityOrFieldActivity</string>
 
 </resources>

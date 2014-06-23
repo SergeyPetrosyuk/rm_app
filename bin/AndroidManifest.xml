@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ita.robotamolodi"
+    package="com.ita.sergey.petrosyuk"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -18,8 +18,9 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.ita.robotamolodi.MainActivity"
+            android:name="com.ita.sergey.petrosyuk.MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:windowSoftInputMode="stateHidden"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,8 +29,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.ita.robotamolodi.DetailActivity"
-            android:label="@string/title_activity_detail" >
+            android:name="com.ita.sergey.petrosyuk.SelectCityOrFieldActivity"
+            android:label="@string/title_activity_select_city_or_field"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:windowSoftInputMode="stateHidden" >
         </activity>
     </application>
 

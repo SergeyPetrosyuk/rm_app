@@ -14,6 +14,7 @@ public class SearchBlock {
 			((RelativeLayout)v.findViewById(R.id.rl_progress_bar)).setVisibility(View.VISIBLE);
 			((ListView)v.findViewById(R.id.lv_show_data)).setVisibility(View.GONE);
 			((Button)v.findViewById(R.id.close_open_search_block)).setVisibility(View.GONE);
+			//((Button)v.findViewById(R.id.button_clear_filter)).setVisibility(View.GONE);
 		}
 		
 		((LinearLayout)v.findViewById(R.id.ll_search_block)).setVisibility(View.GONE);
@@ -25,6 +26,7 @@ public class SearchBlock {
 			((RelativeLayout)v.findViewById(R.id.rl_progress_bar)).setVisibility(View.GONE);
 			((ListView)v.findViewById(R.id.lv_show_data)).setVisibility(View.VISIBLE);
 			((Button)v.findViewById(R.id.close_open_search_block)).setVisibility(View.VISIBLE);
+			//((Button)v.findViewById(R.id.button_clear_filter)).setVisibility(View.VISIBLE);
 		}
 		
 		((LinearLayout)v.findViewById(R.id.ll_search_block)).setVisibility(View.VISIBLE);

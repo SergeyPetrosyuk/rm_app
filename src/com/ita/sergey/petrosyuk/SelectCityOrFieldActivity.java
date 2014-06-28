@@ -2,13 +2,17 @@ package com.ita.sergey.petrosyuk;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,6 +26,7 @@ import android.widget.ListView;
 import com.ita.sergey.petrosyuk.adapters.AdapterCityField;
 import com.ita.sergey.petrosyuk.asynktasks.TaskCityField;
 import com.ita.sergey.petrosyuk.interfaces.CityField;
+import com.ita.sergey.petrosyuk.sqlite.DB;
 
 public class SelectCityOrFieldActivity extends ActionBarActivity {
 
@@ -30,13 +35,16 @@ public class SelectCityOrFieldActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.select_city_or_field);
 
+		ActionBar actionBar = getSupportActionBar();
+		actionBar.hide();
+		
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.container, new PlaceholderFragment()).commit();
 		}
 	}
 
-	@Override
+	/*@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.select_city_or_field, menu);
 		return true;
@@ -49,7 +57,7 @@ public class SelectCityOrFieldActivity extends ActionBarActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
-	}
+	}*/
 
 	/**
 	 * A placeholder fragment containing a simple view.
@@ -60,6 +68,8 @@ public class SelectCityOrFieldActivity extends ActionBarActivity {
 		private EditText etSearchLine; 
 		private List<CityField> dataCitiesOrFields;
 		private Button buttonDone;
+		private Pattern p = Pattern.compile("[\\w]*");
+		private Matcher m;
 		
 		public PlaceholderFragment() {
 		}
@@ -75,14 +85,25 @@ public class SelectCityOrFieldActivity extends ActionBarActivity {
 			
 			lvCitiesOrFields = (ListView)rootView.findViewById(R.id.lv_select_city_or_field);
 			etSearchLine = (EditText)rootView.findViewById(R.id.et_search_city_or_field);
+			
+			
 			etSearchLine.addTextChangedListener(new TextWatcher() {
-				
 				@Override
 				public void onTextChanged(CharSequence s, int start, int before, int count) {
 					AdapterCityField adapter = (AdapterCityField) lvCitiesOrFields.getAdapter();
 					List<CityField> tmpList = new ArrayList<CityField>();
 					
-					if(count > 1){
+					m = p.matcher(etSearchLine.getText());
+					
+					if(m.matches()){
+						Log.i(MainActivity.LOG_TAG, "" + true);
+					} else {
+						Log.i(MainActivity.LOG_TAG, "" + false);
+						return;
+					}// if
+					
+					if(count > 0){
+						
 						if(dataCitiesOrFields == null)
 							dataCitiesOrFields = adapter.getData();
 						
@@ -103,7 +124,7 @@ public class SelectCityOrFieldActivity extends ActionBarActivity {
 						
 						adapter.setData(tmpList);
 						
-					} else if(count < 1){
+					} else if(count < 0){
 						adapter.setData(dataCitiesOrFields);
 					}// else/if
 					
@@ -125,10 +146,10 @@ public class SelectCityOrFieldActivity extends ActionBarActivity {
 			
 			switch (dataType) {
 			case StaticData.CITIES:
-				new TaskCityField(lvCitiesOrFields, this.getActivity()).execute(StaticData.GET_CITIES, StaticData.CITIES);
+				new TaskCityField(rootView, lvCitiesOrFields, this.getActivity()).execute(DB.TABLE_CITY);
 				break;
 			case StaticData.FIELDS:
-				new TaskCityField(lvCitiesOrFields, this.getActivity()).execute(StaticData.GET_FIELDS, StaticData.FIELDS);
+				new TaskCityField(rootView, lvCitiesOrFields, this.getActivity()).execute(DB.TABLE_FIELD);
 				break;
 			default:
 				break;
@@ -141,12 +162,18 @@ public class SelectCityOrFieldActivity extends ActionBarActivity {
 		public void onClick(View v) {
 			AdapterCityField adapterForResult = (AdapterCityField) lvCitiesOrFields.getAdapter();
 			int itemPosition = lvCitiesOrFields.getCheckedItemPosition();
-			List<CityField> tmp = adapterForResult.getData();
-			CityField item = tmp.get(itemPosition);		
-			Intent data = new Intent();
-			data.putExtra(StaticData.ID, item.getId());
-			data.putExtra(StaticData.NAME, item.getName());
-			this.getActivity().setResult(RESULT_OK, data);
+			
+			if(itemPosition != -1){
+				List<CityField> tmp = adapterForResult.getData();
+				CityField item = tmp.get(itemPosition);		
+				Intent data = new Intent();
+				data.putExtra(StaticData.ID, item.getIntId());
+				data.putExtra(StaticData.NAME, item.getName());
+				this.getActivity().setResult(RESULT_OK, data);
+			} else {
+				this.getActivity().setResult(RESULT_OK, null);
+			}// if/else
+			
 			this.getActivity().finish();
 		}// onClick
 	}// PlaceholderFragment

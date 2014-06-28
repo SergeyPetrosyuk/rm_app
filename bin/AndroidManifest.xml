@@ -20,8 +20,8 @@
         <activity
             android:name="com.ita.sergey.petrosyuk.MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
-            android:windowSoftInputMode="stateHidden"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,9 +30,15 @@
         </activity>
         <activity
             android:name="com.ita.sergey.petrosyuk.SelectCityOrFieldActivity"
-            android:label="@string/title_activity_select_city_or_field"
             android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:label="@string/title_activity_select_city_or_field"
             android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity android:name="com.ita.sergey.petrosyuk.WebViewForListItem" >
+        </activity>
+        <activity
+            android:name="com.ita.sergey.petrosyuk.WebViewActivity"
+            android:label="@string/title_activity_web_view" >
         </activity>
     </application>
 

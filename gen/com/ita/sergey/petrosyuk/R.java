@@ -1080,14 +1080,24 @@ containing a value of this type.
         public static final int abc_textfield_searchview_holo_light=0x7f020054;
         public static final int abc_textfield_searchview_right_holo_dark=0x7f020055;
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
-        public static final int close_arrow=0x7f020057;
-        public static final int ic_launcher=0x7f020058;
-        public static final int logo_uk=0x7f020059;
-        public static final int open_arrow=0x7f02005a;
-        public static final int rabota_ua=0x7f02005b;
-        public static final int search1=0x7f02005c;
-        public static final int search2=0x7f02005d;
-        public static final int search_button_style=0x7f02005e;
+        public static final int arrow_back=0x7f020057;
+        public static final int button_clear=0x7f020058;
+        public static final int button_normal=0x7f020059;
+        public static final int button_pressed=0x7f02005a;
+        public static final int button_selector=0x7f02005b;
+        public static final int clear_normal=0x7f02005c;
+        public static final int clear_pressed=0x7f02005d;
+        public static final int close_arrow=0x7f02005e;
+        public static final int default_icon=0x7f02005f;
+        public static final int ic_launcher=0x7f020060;
+        public static final int jobs_ua_icon=0x7f020061;
+        public static final int logo_uk=0x7f020062;
+        public static final int open_arrow=0x7f020063;
+        public static final int rabota_ua=0x7f020064;
+        public static final int search1=0x7f020065;
+        public static final int search2=0x7f020066;
+        public static final int search_button_style=0x7f020067;
+        public static final int work_ua_icon=0x7f020068;
     }
     public static final class id {
         public static final int action_bar=0x7f05001c;
@@ -1101,15 +1111,18 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f05004a;
+        public static final int action_settings=0x7f050054;
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
-        public static final int btn_in_city=0x7f050040;
-        public static final int btn_in_field=0x7f050041;
-        public static final int button_done=0x7f050049;
+        public static final int btn_in_city=0x7f050045;
+        public static final int btn_in_field=0x7f050047;
+        public static final int button_clear_city=0x7f050046;
+        public static final int button_clear_field=0x7f050048;
+        public static final int button_done=0x7f050050;
+        public static final int button_move_back=0x7f050053;
         public static final int checkbox=0x7f05002d;
-        public static final int close_open_search_block=0x7f050042;
+        public static final int close_open_search_block=0x7f050049;
         public static final int collapseActionView=0x7f05000d;
         public static final int container=0x7f05003c;
         public static final int default_activity_button=0x7f050028;
@@ -1118,8 +1131,8 @@ containing a value of this type.
         public static final int dropdown=0x7f05000f;
         public static final int edit_query=0x7f050030;
         public static final int end=0x7f050013;
-        public static final int et_search_city_or_field=0x7f050046;
-        public static final int et_search_line=0x7f05003e;
+        public static final int et_search_city_or_field=0x7f05004d;
+        public static final int et_search_line=0x7f050043;
         public static final int expand_activities_button=0x7f050026;
         public static final int expanded_menu=0x7f05002c;
         public static final int home=0x7f050014;
@@ -1127,21 +1140,23 @@ containing a value of this type.
         public static final int icon=0x7f05002a;
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050027;
+        public static final int iv_item_icon=0x7f05003e;
         public static final int listMode=0x7f050001;
         public static final int list_item=0x7f050029;
-        public static final int ll_search_block=0x7f05003d;
-        public static final int lv_dinamic_city_select=0x7f050047;
-        public static final int lv_select_city_or_field=0x7f050048;
-        public static final int lv_show_data=0x7f050045;
+        public static final int ll_search_block=0x7f050042;
+        public static final int lv_select_city_or_field=0x7f05004f;
+        public static final int lv_show_data=0x7f05004c;
         public static final int middle=0x7f050012;
         public static final int never=0x7f050009;
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
-        public static final int pb=0x7f050044;
+        public static final int pb=0x7f05004b;
+        public static final int progress_bar=0x7f050051;
+        public static final int progress_bar_select_fragment=0x7f05004e;
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
         public static final int radio=0x7f05002f;
-        public static final int rl_progress_bar=0x7f050043;
+        public static final int rl_progress_bar=0x7f05004a;
         public static final int search_badge=0x7f050032;
         public static final int search_bar=0x7f050031;
         public static final int search_button=0x7f050033;
@@ -1156,14 +1171,19 @@ containing a value of this type.
         public static final int showCustom=0x7f050007;
         public static final int showHome=0x7f050004;
         public static final int showTitle=0x7f050006;
-        public static final int spiner_vacancy_or_resume=0x7f05003f;
+        public static final int spiner_vacancy_or_resume=0x7f050044;
         public static final int split_action_bar=0x7f05001e;
         public static final int submit_area=0x7f050039;
         public static final int tabMode=0x7f050002;
         public static final int title=0x7f05002b;
         public static final int top_action_bar=0x7f050020;
+        public static final int tv_item_city=0x7f050040;
+        public static final int tv_item_date=0x7f050041;
+        public static final int tv_item_site=0x7f05003f;
+        public static final int tv_item_title=0x7f05003d;
         public static final int up=0x7f050021;
         public static final int useLogo=0x7f050003;
+        public static final int web_view_for_list_item=0x7f050052;
         public static final int withText=0x7f05000c;
     }
     public static final class integer {
@@ -1217,14 +1237,21 @@ containing a value of this type.
         public static final int abc_search_view=0x7f030016;
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_main=0x7f030018;
-        public static final int fragment_main=0x7f030019;
-        public static final int fragment_select_city_or_field=0x7f03001a;
-        public static final int select_city_or_field=0x7f03001b;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001c;
+        public static final int activity_web_view=0x7f030019;
+        public static final int data_item=0x7f03001a;
+        public static final int fragment_main=0x7f03001b;
+        public static final int fragment_select_city_or_field=0x7f03001c;
+        public static final int fragment_web_view=0x7f03001d;
+        public static final int select_city_or_field=0x7f03001e;
+        public static final int spinner_drop_down=0x7f03001f;
+        public static final int spinner_item=0x7f030020;
+        public static final int support_simple_spinner_dropdown_item=0x7f030021;
+        public static final int web_view=0x7f030022;
     }
     public static final class menu {
         public static final int main=0x7f0d0000;
         public static final int select_city_or_field=0x7f0d0001;
+        public static final int web_view=0x7f0d0002;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1278,11 +1305,15 @@ containing a value of this type.
         public static final int link=0x7f0a0017;
         public static final int loading_of_resumes=0x7f0a0010;
         public static final int make_choice=0x7f0a0013;
+        public static final int no_records_in_db=0x7f0a001e;
+        public static final int nothing_found=0x7f0a001c;
+        public static final int page_loading=0x7f0a001d;
         public static final int publish_date=0x7f0a0018;
         public static final int search_hint=0x7f0a0011;
         public static final int site=0x7f0a0016;
         public static final int title_activity_detail=0x7f0a0015;
-        public static final int title_activity_select_city_or_field=0x7f0a001c;
+        public static final int title_activity_select_city_or_field=0x7f0a001f;
+        public static final int title_activity_web_view=0x7f0a0020;
     }
     public static final class style {
         /** 
@@ -1311,6 +1342,9 @@ containing a value of this type.
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f0b008c;
+        public static final int ButtonCityField=0x7f0b008e;
+        public static final int ButtonClear=0x7f0b0091;
+        public static final int SearchLine=0x7f0b008f;
         /**  Mimic text appearance in select_dialog_item.xml 
          */
         public static final int TextAppearance_AppCompat_Base_CompactMenu_Dialog=0x7f0b0063;
@@ -1361,6 +1395,8 @@ containing a value of this type.
         public static final int TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f0b002f;
         public static final int TextAppearance_Widget_AppCompat_Base_ExpandedMenu_Item=0x7f0b0062;
         public static final int TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f0b0028;
+        public static final int TextLabel=0x7f0b008d;
+        public static final int TextViewCityDate=0x7f0b0090;
         /**  Themes in the "Theme.AppCompat" family will contain an action bar by default.
          If Holo themes are available on the current platform version they will be used.
          A limited Holo-styled action bar will be provided on platform versions older

@@ -1,11 +1,9 @@
 package com.ita.sergey.petrosyuk.entity.vacancy;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.google.gson.annotations.Expose;
+import com.ita.sergey.petrosyuk.interfaces.ResumeVacancy;
 
-public class Vacancy {
+public class Vacancy implements ResumeVacancy {
 	@Expose
 	private String title;
 	@Expose
@@ -19,13 +17,23 @@ public class Vacancy {
 	@Expose
 	private String employer;
 	@Expose
-	private List<String> city = new ArrayList<String>();
+	private String city;
 	@Expose
 	private String link;
 	@Expose
 	private String site;
 	@Expose
 	private String field;
+	
+	private int id;
+	
+	public void setId(int id){
+		this.id = id;
+	}
+	
+	public int getId(){
+		return this.id;
+	}
 
 	public String getTitle() {
 		return title;
@@ -75,11 +83,11 @@ public class Vacancy {
 		this.employer = employer;
 	}
 
-	public List<String> getCity() {
+	public String getCity() {
 		return city;
 	}
 
-	public void setCity(List<String> city) {
+	public void setCity(String city) {
 		this.city = city;
 	}
 

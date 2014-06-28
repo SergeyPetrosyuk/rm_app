@@ -1,8 +1,9 @@
 package com.ita.sergey.petrosyuk.entity.resume;
 
 import com.google.gson.annotations.Expose;
+import com.ita.sergey.petrosyuk.interfaces.ResumeVacancy;
 
-public class Resume {
+public class Resume implements ResumeVacancy {
 	@Expose
 	private String title;
 	@Expose
@@ -23,6 +24,16 @@ public class Resume {
 	private String site;
 	@Expose
 	private String field;
+	
+	private int id;
+	
+	public void setId(int id){
+		this.id = id;
+	}
+	
+	public int getId(){
+		return this.id;
+	}
 
 	public String getTitle() {
 		return title;

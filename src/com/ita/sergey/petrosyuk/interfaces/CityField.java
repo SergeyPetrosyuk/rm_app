@@ -5,4 +5,5 @@ public interface CityField {
 	public String getName();
 	public void setIntId(int id);
 	public int getIntId();
+	public void setName(String name);
 }

@@ -16,12 +16,16 @@
     <string name="check_connection">Перевірте підключення до Internet</string>
     <string name="detail_search_arrow">пошук</string>
     <string name="done">Готово</string>
+    <string name="nothing_found">Нічого не знайдено</string>
+    <string name="page_loading">Завантаження сторінки</string>
+    <string name="no_records_in_db">В базі данних немає записів. \n\r Перевірте піжключення до Internet \n\r та перезавантажте додаток!</string>
 
     <string-array name="vacancy_or_resume">
-        <item>резюме</item>
         <item>вакансії</item>
+        <item>резюме</item>
     </string-array>
 
     <string name="title_activity_select_city_or_field">SelectCityOrFieldActivity</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
 
 </resources>

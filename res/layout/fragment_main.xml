@@ -49,8 +49,7 @@
 		        
 		        <Spinner 
 		            android:id="@+id/spiner_vacancy_or_resume"
-		            android:layout_width="0dp"
-		            android:layout_weight="75"
+		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_gravity="center_vertical"
 		            android:gravity="center_vertical"
@@ -63,15 +62,18 @@
 	            android:layout_marginTop="9dp"
 	            android:padding="4dp"
 	            android:orientation="horizontal">
-	            <TextView 
-		            style="@style/TextLabel"
-		            android:text="@string/in_city"/>
+
+	            <TextView
+	                style="@style/TextLabel"
+	                android:text="@string/in_city" />
 		        
 		        <Button
 		            android:id="@+id/btn_in_city"
-		            style="@style/ButtonCityField"/>
+		            style="@style/ButtonCityField"
+		            android:background="#00000000" />
 
-		        <ImageButton
+
+	            <ImageButton
 		            android:id="@+id/button_clear_city"
 		            style="@style/ButtonClear"/>
 
@@ -90,11 +92,14 @@
 		        <Button
 		            android:id="@+id/btn_in_field"
 		            style="@style/ButtonCityField"
+		            android:maxWidth="205dp"
 		            android:layout_height="wrap_content" />
-		        
-		        <ImageButton 
+
+
+	            <ImageButton
 		            android:id="@+id/button_clear_field"
 		            style="@style/ButtonClear" />
+		        
 
 	        </LinearLayout>
     </LinearLayout>

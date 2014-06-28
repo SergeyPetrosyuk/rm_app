@@ -15,27 +15,27 @@ import android.webkit.WebViewClient;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 
-public class WebViewActivity extends ActionBarActivity {
+public class WebPageActivity extends ActionBarActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_web_view);
-
+		setContentView(R.layout.activity_web_page);
+		
 		ActionBar actionBar = getSupportActionBar();
 		actionBar.hide();
-		
+
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.container, new PlaceholderFragment()).commit();
 		}
 	}
 
-	/*@Override
+/*	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.web_view, menu);
+		getMenuInflater().inflate(R.menu.web_page, menu);
 		return true;
 	}
 
@@ -65,16 +65,16 @@ public class WebViewActivity extends ActionBarActivity {
 
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_web_view, container, false);
+			View rootView = inflater.inflate(R.layout.fragment_web_page, container, false);
 			
-			buttonBack = (ImageButton)rootView.findViewById(R.id.button_move_back);
+			buttonBack  = (ImageButton)rootView.findViewById(R.id.button_move_back);
 			progressBar = (ProgressBar)rootView.findViewById(R.id.progress_bar);
-			webView = (WebView)rootView.findViewById(R.id.web_view_for_list_item);
+			webView		= (WebView)rootView.findViewById(R.id.web_view_for_list_item);
 			webView.setWebViewClient(new MyWebClient());
 			webView.getSettings().setJavaScriptEnabled(true);
+			webView.getSettings().setBuiltInZoomControls(true);
 			
 			buttonBack.setOnClickListener(new OnClickListener() {
-				
 				@Override
 				public void onClick(View v) {
 					getActivity().finish();
@@ -85,7 +85,6 @@ public class WebViewActivity extends ActionBarActivity {
 			String url = intent.getStringExtra(StaticData.URL);
 			
 			webView.loadUrl(url);
-			
 			return rootView;
 		}
 		

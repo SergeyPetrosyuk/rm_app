@@ -37,8 +37,8 @@
         <activity android:name="com.ita.sergey.petrosyuk.WebViewForListItem" >
         </activity>
         <activity
-            android:name="com.ita.sergey.petrosyuk.WebViewActivity"
-            android:label="@string/title_activity_web_view" >
+            android:name="com.ita.sergey.petrosyuk.WebPageActivity"
+            android:label="@string/title_activity_web_page" >
         </activity>
     </application>
 

@@ -27,5 +27,6 @@
 
     <string name="title_activity_select_city_or_field">SelectCityOrFieldActivity</string>
     <string name="title_activity_web_view">WebViewActivity</string>
+    <string name="title_activity_web_page">WebPageActivity</string>
 
 </resources>

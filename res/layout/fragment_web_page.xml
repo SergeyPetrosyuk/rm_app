@@ -2,17 +2,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF" 
-    tools:context="com.ita.sergey.petrosyuk.WebViewActivity$PlaceholderFragment" >
+    android:background="#FFFFFF"
+    tools:context="com.ita.sergey.petrosyuk.WebPageActivity$PlaceholderFragment" >
 
     <ProgressBar 
         android:id="@+id/progress_bar"
         android:layout_width="30dp"
         android:layout_height="30dp"
-		android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
         android:background="#00000000"
         android:visibility="visible"/>
-    
+
     <WebView 
         android:id="@+id/web_view_for_list_item"
         android:layout_width="match_parent"
@@ -21,10 +22,9 @@
     
     <ImageButton 
         android:id="@+id/button_move_back"
-        android:layout_width="match_parent"
+        android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:src="@drawable/arrow_back"
         android:background="@drawable/button_selector"/>
-
 </RelativeLayout>

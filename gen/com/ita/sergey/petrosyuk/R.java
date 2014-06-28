@@ -1237,21 +1237,22 @@ containing a value of this type.
         public static final int abc_search_view=0x7f030016;
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_main=0x7f030018;
-        public static final int activity_web_view=0x7f030019;
-        public static final int data_item=0x7f03001a;
-        public static final int fragment_main=0x7f03001b;
-        public static final int fragment_select_city_or_field=0x7f03001c;
-        public static final int fragment_web_view=0x7f03001d;
-        public static final int select_city_or_field=0x7f03001e;
-        public static final int spinner_drop_down=0x7f03001f;
-        public static final int spinner_item=0x7f030020;
-        public static final int support_simple_spinner_dropdown_item=0x7f030021;
-        public static final int web_view=0x7f030022;
+        public static final int activity_web_page=0x7f030019;
+        public static final int activity_web_view=0x7f03001a;
+        public static final int data_item=0x7f03001b;
+        public static final int fragment_main=0x7f03001c;
+        public static final int fragment_select_city_or_field=0x7f03001d;
+        public static final int fragment_web_page=0x7f03001e;
+        public static final int select_city_or_field=0x7f03001f;
+        public static final int spinner_drop_down=0x7f030020;
+        public static final int spinner_item=0x7f030021;
+        public static final int support_simple_spinner_dropdown_item=0x7f030022;
     }
     public static final class menu {
         public static final int main=0x7f0d0000;
         public static final int select_city_or_field=0x7f0d0001;
-        public static final int web_view=0x7f0d0002;
+        public static final int web_page=0x7f0d0002;
+        public static final int web_view=0x7f0d0003;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1313,6 +1314,7 @@ containing a value of this type.
         public static final int site=0x7f0a0016;
         public static final int title_activity_detail=0x7f0a0015;
         public static final int title_activity_select_city_or_field=0x7f0a001f;
+        public static final int title_activity_web_page=0x7f0a0021;
         public static final int title_activity_web_view=0x7f0a0020;
     }
     public static final class style {
@@ -1344,6 +1346,7 @@ containing a value of this type.
         public static final int AppTheme=0x7f0b008c;
         public static final int ButtonCityField=0x7f0b008e;
         public static final int ButtonClear=0x7f0b0091;
+        public static final int RelativeLayoutForButtonClear=0x7f0b0092;
         public static final int SearchLine=0x7f0b008f;
         /**  Mimic text appearance in select_dialog_item.xml 
          */

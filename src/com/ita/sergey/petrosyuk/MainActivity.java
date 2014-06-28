@@ -3,15 +3,18 @@ package com.ita.sergey.petrosyuk;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
@@ -146,7 +149,12 @@ public class MainActivity extends ActionBarActivity {
 					String phrase = null;
 					
 					try {
-						phrase = URLEncoder.encode(etSearchLine.getText().toString(), "UTF-8");
+						phrase = etSearchLine.getText().toString();
+						phrase = phrase.replaceAll("[\\n\\s]", "");
+						etSearchLine.setText(phrase);
+						phrase = URLEncoder.encode(phrase, "UTF-8");
+						
+						etSearchLine.setText(phrase);
 					} catch (UnsupportedEncodingException e) { }
 					
 					String url = StaticData.GET_SEARCHED_DATA + "?category=" + category + "&field=" + field + ""
@@ -174,7 +182,7 @@ public class MainActivity extends ActionBarActivity {
 						ResumeVacancy item = (ResumeVacancy) adapter.getItemAtPosition(position);
 						String url = item.getLink();
 						
-						Intent intent = new Intent(getActivity(), WebViewActivity.class);
+						Intent intent = new Intent(getActivity(), WebPageActivity.class);
 						intent.putExtra(StaticData.URL, url);
 						startActivity(intent);
 					} else {
@@ -252,6 +260,13 @@ public class MainActivity extends ActionBarActivity {
 			
 		}// onActivityResult
 		
-		
 	}// PlaceholderFragment
+	
+	// hides software keyboard from screen.
+	@Override
+    public boolean onTouchEvent(MotionEvent event) {
+        InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        return true;
+    }// onTouchEvent
 }// MainActivity
